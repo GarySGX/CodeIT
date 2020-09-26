@@ -4,6 +4,7 @@ app = Flask(__name__)
 import codeitsuisse.routes.contact_trace
 import codeitsuisse.routes.revisitgeometry
 import codeitsuisse.routes.dummy
+import codeitsuisse.routes.book;
 #import codeitsuisse.routes.salad
 
 
