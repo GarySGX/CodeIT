@@ -28,4 +28,5 @@ def olympiad():
                 counter+=1
         return counter
     result['optimalNumberOfBooks']= Number(books,days)
-    return dumps(result)
+    print(result)
+    return jsonify(result)
