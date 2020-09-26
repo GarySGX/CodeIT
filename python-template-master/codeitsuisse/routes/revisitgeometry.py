@@ -1,3 +1,5 @@
+## revisitgeometry.py
+
 import logging
 import json
 from flask import request, jsonify
@@ -58,6 +60,3 @@ def get_intercepts():
         result.append({"x": round(coords[0], 2), 'y': round(coords[1], 2)})
     print(result)
     return json.dumps(result)
-
-
-
