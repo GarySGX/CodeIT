@@ -7,8 +7,10 @@ logger = logging.getLogger(__name__)
 
 @app.route('/olympiad-of-babylon', methods=['POST'])
 def olympiad():
-    result = {'optimalNumberOfBooks':counter}
-    books = request.get_json()
+    result = {'optimalNumberOfBooks':0}
+    input1 = request.get_json()
+    books = input1['books']
+    days = input1['days']
     def Number(books,days):
         books.sort()
         days.sort(reverse=True)
@@ -24,4 +26,6 @@ def olympiad():
                 i=books[bookI]
                 bookI+=1
                 counter+=1
-    return json.dumps(result)
+        return counter
+    result['optimalNumberOfBooks']= Number(books,days)
+    return dumps(result)
