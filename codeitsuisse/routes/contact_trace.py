@@ -79,6 +79,6 @@ def contact_trace():
                 else:
                     result.append(data.get("infected").get("name") + " -> " + data.get("origin").get("name"))
             # check if the guy in cluster is also connected to the origin if it is origin ->clutser-infected, then only this,
-    return json.dump(result)
+    return json.dumps(result)
 
 
